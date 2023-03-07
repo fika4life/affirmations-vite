@@ -1,6 +1,7 @@
 import { supabase } from './client';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
 
 function App() {
   const [affirmation, setAffirmation] = useState('');
@@ -38,8 +39,9 @@ function App() {
   };
 
   return (
-    <div className="App container mx-auto mt-60">
-      <main className="place-content-center text-center">
+    <div className="App ">
+      <Navbar></Navbar>
+      <main className="place-content-center text-center container mx-auto mt-60">
         <h4 className="text-2xl font-bold dark:text-white mb-28">
           {affirmation.text}
         </h4>
