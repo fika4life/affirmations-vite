@@ -5,7 +5,9 @@ export default function SharedLayout() {
   return (
     <>
       <Navbar></Navbar>
-      <Outlet></Outlet>
+      <main className="text-center container mx-auto my-16">
+        <Outlet></Outlet>
+      </main>
     </>
   );
 }
