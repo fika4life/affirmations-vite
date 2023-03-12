@@ -12,7 +12,11 @@ export default function AddAffirmation() {
     e.preventDefault();
 
     //handle submit
-    createAffirmation();
+    if (text.length == 0) {
+      notifyError('Please type in an affirmation');
+    } else {
+      createAffirmation();
+    }
   };
 
   const handleInputChange = (e) => {
